@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Arquitetura;
+namespace Alura\Arquitetura\Dominio;
 
 // Value Objects, pois não precisa ter um identificador.
 // É o Aluno que tem identificação, mas não o Email
