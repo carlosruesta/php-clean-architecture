@@ -1,2 +1,4 @@
 vendor
 .idea
+banco.sqlite
+.phpunit.result.cache
