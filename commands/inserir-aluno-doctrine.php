@@ -12,9 +12,9 @@ $em = EntityManagerCreator::criaEntityManager();
 
 $repositorioDeAlunoComDoctrine = new RepositorioDeAlunoComDoctrine($em);
 
-$aluno1 = Aluno::comCpfNomeEEmail('222.827.708-71', 'Carlos', 'carlos@carlos.com');
-$aluno1->adicionarTelefone('19', '888752113');
-$aluno1->adicionarTelefone('19', '999421114');
+$aluno1 = Aluno::comCpfNomeEEmail('222.827.708-73', 'Carlos', 'carlos@carlos.com');
+$aluno1->adicionarTelefone('19', '888752117');
+$aluno1->adicionarTelefone('19', '999421118');
 
 $repositorioDeAlunoComDoctrine->adicionar($aluno1);
 

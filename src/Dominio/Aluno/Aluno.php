@@ -4,6 +4,8 @@ namespace Alura\Arquitetura\Dominio\Aluno;
 
 use Alura\Arquitetura\Dominio\Cpf;
 use Alura\Arquitetura\Dominio\Email;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 
 class Aluno
 {
@@ -11,14 +13,14 @@ class Aluno
     private Cpf $cpf;
     private string $nome;
     private Email $email;
-    private array $telefones;
+    private Collection $telefones;
 
     public function __construct(Cpf $cpf, string $nome, Email $email)
     {
         $this->cpf = $cpf;
         $this->nome = $nome;
         $this->email = $email;
-        $this->telefones = [];
+        $this->telefones = new ArrayCollection();
     }
 
     // Usando named-constructor
@@ -29,7 +31,7 @@ class Aluno
 
     public function adicionarTelefone(string $ddd, string $numero)
     {
-        $this->telefones[] = new Telefone($ddd, $numero);
+        $this->telefones[] = new Telefone($this->cpf, $ddd, $numero);
         return $this;
     }
 
@@ -48,7 +50,7 @@ class Aluno
         return $this->email;
     }
 
-    /** @return Telefone[] */
+    /** @return ArrayCollection */
     public function telefones(): array
     {
         return $this->telefones;

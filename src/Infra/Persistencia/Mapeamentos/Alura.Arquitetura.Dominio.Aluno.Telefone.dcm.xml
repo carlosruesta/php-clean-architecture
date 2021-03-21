@@ -6,5 +6,6 @@
 		<id name="ddd" type="string" />
 		<id name="numero" type="string" />
 
+		<field name="cpf" column="cpf_aluno" type="string" nullable="false"/>
 	</entity>
 </doctrine-mapping>

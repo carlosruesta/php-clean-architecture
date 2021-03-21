@@ -2,15 +2,19 @@
 
 namespace Alura\Arquitetura\Dominio\Aluno;
 
+use Alura\Arquitetura\Dominio\Cpf;
+
 class Telefone
 {
+    private Cpf $cpf;
     private string $ddd;
     private string $numero;
 
-    public function __construct(string $ddd, string $numero)
+    public function __construct(CPF $cpf, string $ddd, string $numero)
     {
         $this->setDdd($ddd);
         $this->setNumero($numero);
+        $this->cpf = $cpf;
     }
 
     private function setDdd(string $ddd): void

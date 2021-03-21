@@ -24,7 +24,6 @@ class RepositorioDeAlunoComDoctrine implements RepositorioAluno
 
     public function adicionar(Aluno $aluno): void
     {
-        var_dump($aluno);
         $this->em->persist($aluno);
         $this->em->flush();
     }
