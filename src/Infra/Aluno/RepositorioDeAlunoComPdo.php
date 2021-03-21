@@ -75,6 +75,8 @@ class RepositorioDeAlunoComPdo implements RepositorioAluno
             $listaAlunos[] = Aluno::comCpfNomeEEmail($aluno['cpf'], $aluno['nome'], $aluno['email']);
 
         }
+
+        return $listaAlunos;
     }
 
     public function adicionaTelefoneAoAluno(Aluno $aluno, Telefone $telefone)

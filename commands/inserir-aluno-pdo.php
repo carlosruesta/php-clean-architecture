@@ -1,10 +1,10 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
 use Alura\Arquitetura\Dominio\Aluno\Aluno;
 use Alura\Arquitetura\Infra\Aluno\RepositorioDeAlunoComPdo;
 use Alura\Arquitetura\Infra\Persistencia\CriadorConexaoPdo;
-
-require_once 'vendor/autoload.php';
 
 $pdo = CriadorConexaoPdo::criaConexao();
 
