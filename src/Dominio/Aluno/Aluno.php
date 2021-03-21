@@ -51,7 +51,7 @@ class Aluno
     }
 
     /** @return ArrayCollection */
-    public function telefones(): array
+    public function telefones(): ArrayCollection
     {
         return $this->telefones;
     }
