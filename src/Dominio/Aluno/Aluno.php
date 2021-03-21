@@ -18,6 +18,7 @@ class Aluno
         $this->cpf = $cpf;
         $this->nome = $nome;
         $this->email = $email;
+        $this->telefones = [];
     }
 
     // Usando named-constructor
@@ -50,6 +51,6 @@ class Aluno
     /** @return Telefone[] */
     public function telefones(): array
     {
-        return $this->telefones();
+        return $this->telefones;
     }
 }

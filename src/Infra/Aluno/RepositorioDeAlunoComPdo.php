@@ -30,7 +30,7 @@ class RepositorioDeAlunoComPdo implements RepositorioAluno
         $stmt->execute();
 
         /** @var Telefone $telefone */
-        foreach ($aluno->getTelefones() as $telefone) {
+        foreach ($aluno->telefones() as $telefone) {
             $this->adicionaTelefoneAoAluno($aluno, $telefone);
         }
 

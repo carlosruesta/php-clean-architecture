@@ -1,0 +1,24 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+	<entity
+			name="Alura\Arquitetura\Dominio\Indicacao\Indicacao"
+			table="indicacoes">
+
+		<id name="indicante" type="string" association-key="true"/>
+		<id name="indicado" type="string" association-key="true"/>
+
+		<field name="data" column="data_indicacao" type="datetime"/>
+
+		<one-to-one field="indicante" target-entity="Alura\Arquitetura\Dominio\Aluno\Aluno">
+			<join-columns>
+				<join-column name="cpf_indicante" referenced-column-name="id"/>
+			</join-columns>
+		</one-to-one>
+
+		<one-to-one field="indicado" target-entity="Alura\Arquitetura\Dominio\Aluno\Aluno">
+			<join-columns>
+				<join-column name="cpf_indicado" referenced-column-name="id"/>
+			</join-columns>
+		</one-to-one>
+
+	</entity>
+</doctrine-mapping>
