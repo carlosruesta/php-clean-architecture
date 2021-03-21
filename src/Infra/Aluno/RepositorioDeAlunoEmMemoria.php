@@ -14,9 +14,9 @@ class RepositorioDeAlunoEmMemoria implements RepositorioAluno
     /** @var Aluno[] */
     private $alunos;
 
-    public function __construct(array $alunos)
+    public function __construct()
     {
-        $this->alunos = $alunos;
+        $this->alunos = [];
     }
 
     public function adicionar(Aluno $aluno): void
